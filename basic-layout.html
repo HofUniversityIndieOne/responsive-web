@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- the "viewport" definition is most important for handheld devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Bootstrap Testing</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    .block { color: white; padding: 1em; }
+    .red { background-color: red }
+    .green { background-color: green }
+    .blue { background-color: blue }
+    .violet { background-color: violet }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 block red">Header</div>
+    </div>
+    <div class="row">
+      <!-- "push" (to the right) and "pull" (to the left) are responsible for re-ordering
+           columns for either "sm" (small, mobile) and "md" (medium, tablet) devices -->
+      <!-- the trick is to start with modelling the mobile layout ("mobile first") and
+           using "push" and "pull" to adjust columns for table and desktop viewports -->
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-push-4 col-md-push-3 block blue">Main Content</div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-sm-pull-8 col-md-pull-6 block green">Left Teaser</div>
+      <div class="col-xs-6 col-sm-12 col-md-3 block violet">Additional Content</div>
+    </div>
+  </div>
+  <!-- this example does not require JavaScript, it's added for the sake of being complete -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+          crossorigin="anonymous"></script>
+</body>
+</html>
